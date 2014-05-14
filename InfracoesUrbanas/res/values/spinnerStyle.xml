@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="spinnerStyle">
+       <item name="android:layout_width">130dip</item>
+        <item name="android:layout_height">40dip</item>
+ 		<item name="android:layout_marginLeft">-3dp</item>    
+    </style>    
+</resources>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFE0"
+    android:orientation="vertical" >
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+	</ScrollView>
+            
+	<TextView
+	    android:id="@+id/TextView01"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="0dp"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center"
+	    android:text="@string/textSerie"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<TextView
+	    android:id="@+id/name"
+	    style="@style/nameStyle"
+	    android:layout_alignParentTop="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="20dp"
+	    android:text="@string/applicationName"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:textSize="20sp" />
+
+	<TextView
+	    android:id="@+id/textView1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/name"
+	    android:layout_marginTop="14dp"
+	    android:background="#FFFFE0"
+	    android:gravity="center_horizontal"
+	    android:text="@string/vehicleCadastre"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:textStyle="bold" />
+
+	<TextView
+	    android:id="@+id/TextView02"
+	    android:layout_width="123dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/textView1"
+	    android:layout_marginTop="17dp"
+	    android:gravity="center"
+	    android:text="@string/infractionText"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<EditText
+	    android:id="@+id/infractionNumberText"
+	    android:layout_width="110dp"
+	    android:layout_height="33dp"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignRight="@+id/TextView02"
+	    android:layout_below="@+id/TextView02"
+	    android:layout_marginLeft="18dp"
+	    android:ems="10"
+	    android:inputType="number" />
+
+	<TextView
+	    android:id="@+id/TextView03"
+	    android:layout_width="123dp"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/infractionNumberText"
+	    android:layout_alignRight="@+id/name"
+	    android:gravity="center"
+	    android:text="@string/textOrgao"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<Spinner
+	    android:id="@+id/orgaoSpinner"
+	    style="@style/spinnerStyle"
+	    android:layout_width="100dp"
+	    android:layout_height="match_parent"
+	    android:layout_alignBottom="@+id/infractionNumberText"
+	    android:layout_alignLeft="@+id/TextView03"
+	    android:layout_alignRight="@+id/TextView03"
+	    android:layout_alignTop="@+id/infractionNumberText" />
+
+	<TextView
+	    android:id="@+id/txtPlaca"
+	    android:layout_width="75dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/infractionNumberText"
+	    android:layout_below="@+id/infractionNumberText"
+	    android:layout_marginTop="14dp"
+	    android:text="@string/boardText"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<EditText
+	    android:id="@+id/boardEditTextCadastre"
+	    android:layout_width="120dp"
+	    android:layout_height="33dp"
+	    android:layout_alignBaseline="@+id/txtPlaca"
+	    android:layout_alignBottom="@+id/txtPlaca"
+	    android:layout_alignLeft="@+id/name"
+	    android:layout_alignRight="@+id/orgaoSpinner"
+	    android:layout_marginLeft="29dp"
+	    android:ems="10"
+	    android:inputType="number" >
+
+	    <requestFocus />
+	</EditText>
+
+	<TextView
+	    android:id="@+id/modelText"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/TextView03"
+	    android:layout_below="@+id/boardEditTextCadastre"
+	    android:layout_marginTop="15dp"
+	    android:text="@string/vehicleModel"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<Spinner
+	    android:id="@+id/companySpinner"
+	    style="@style/spinnerStyle"
+	    android:layout_width="100dp"
+	    android:layout_height="33dp"
+	    android:layout_alignLeft="@+id/orgaoSpinner"
+	    android:layout_alignRight="@+id/boardEditTextCadastre"
+	    android:layout_below="@+id/modelText" />
+
+	<TextView
+	    android:id="@+id/companyTextCadastre"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/companySpinner"
+	    android:layout_alignLeft="@+id/txtPlaca"
+	    android:text="@string/companyText"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<Spinner
+	    android:id="@+id/companySpinnerCadastre"
+	    style="@style/spinnerStyle"
+	    android:layout_width="125dp"
+	    android:layout_height="33dp"
+	    android:layout_alignBaseline="@+id/companySpinner"
+	    android:layout_alignBottom="@+id/companySpinner"
+	    android:layout_alignLeft="@+id/companyTextCadastre" />
+
+	<TextView
+	    android:id="@+id/textView3"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/companyTextCadastre"
+	    android:layout_below="@+id/companySpinnerCadastre"
+	    android:layout_marginTop="14dp"
+	    android:text="@string/yearText"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<Spinner
+	    android:id="@+id/yearSpinner"
+	    style="@style/spinnerStyle"
+	    android:layout_width="125dp"
+	    android:layout_height="33dp"
+	    android:layout_alignLeft="@+id/companySpinnerCadastre"
+	    android:layout_alignRight="@+id/txtPlaca"
+	    android:layout_below="@+id/textView3" />
+
+	<TextView
+	    android:id="@+id/textView2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/textView3"
+	    android:layout_alignBottom="@+id/textView3"
+	    android:layout_centerHorizontal="true"
+	    android:text="@string/propertyText"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<EditText
+	    android:id="@+id/propertySpinner"
+	    android:layout_width="80dp"
+	    android:layout_height="33dp"
+	    android:layout_alignLeft="@+id/textView2"
+	    android:layout_alignRight="@+id/companySpinner"
+	    android:layout_alignTop="@+id/yearSpinner"
+	    android:ems="10"
+	    android:inputType="text" />
+
+	<TextView
+	    android:id="@+id/dateText"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/textView3"
+	    android:layout_below="@+id/yearSpinner"
+	    android:layout_marginTop="16dp"
+	    android:text="@string/dateText"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<EditText
+	    android:id="@+id/editText1"
+	    android:layout_width="80dp"
+	    android:layout_height="33dp"
+	    android:layout_alignLeft="@+id/dateText"
+	    android:layout_below="@+id/dateText"
+	    android:layout_toLeftOf="@+id/companySpinner"
+	    android:ems="10"
+	    android:inputType="date" />
+
+	<TextView
+	    android:id="@+id/hourText"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/dateText"
+	    android:layout_alignBottom="@+id/dateText"
+	    android:layout_toRightOf="@+id/dateText"
+	    android:text="@string/hourText"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="15sp"
+	    android:textStyle="bold" />
+
+	<EditText
+	    android:id="@+id/editText2"
+	    android:layout_width="100dp"
+	    android:layout_height="33dp"
+	    android:layout_alignRight="@+id/propertySpinner"
+	    android:layout_alignTop="@+id/editText1"
+	    android:layout_toRightOf="@+id/dateText"
+	    android:ems="10"
+	    android:inputType="time" />
+
+	<Button
+	    android:id="@+id/cleanButtonCadastre"
+	    android:layout_width="95dp"
+	    android:layout_height="35dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignRight="@+id/editText2"
+	    android:layout_toRightOf="@+id/dateText"
+	    android:text="@string/buttonClean" />
+
+	<Button
+	    android:id="@+id/cadastreButton"
+	    android:layout_width="95dp"
+	    android:layout_height="35dp"
+	    android:layout_alignLeft="@+id/name"
+	    android:layout_alignParentBottom="true"
+	    android:layout_toLeftOf="@+id/companySpinner"
+	    android:text="@string/cadastreButton" />
+
+</RelativeLayout>
