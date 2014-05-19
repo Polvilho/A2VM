@@ -18,14 +18,13 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
-        <activity android:name=".option" android:label="Option"></activity>
-        <activity android:name=".inquiry" android:label="Inquiry"></activity>
-        <activity android:name=".cadastre" android:label="Cadastre"></activity>
+        <activity android:name=".Option" android:label="Option"></activity>
+        <activity android:name=".Cadastre" android:label="Cadastre"></activity>
+        <activity android:name=".Inquiry" android:label="Inquiry"></activity>
         
     </application>
 

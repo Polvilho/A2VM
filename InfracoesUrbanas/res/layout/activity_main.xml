@@ -52,14 +52,16 @@
  	    android:layout_height="wrap_content"
  	    android:layout_centerHorizontal="true" >
  	    
- 	    <Button 
+ 	    <Button
  	        android:id="@+id/enterButton"
- 	        android:text="@string/buttonEnter"
- 	        style="@style/buttonStyle" />
+ 	        style="@style/buttonStyle"
+ 	        android:onClick="onEnterButtonClick"
+ 	        android:text="@string/buttonEnter" />
  	    
  	    <Button
  	        android:id="@+id/cleanButtonLogin"
  	        android:text="@string/buttonClean"
+ 	        android:onClick="onCleanButtonClick"
  	        style="@style/buttonStyle" />
  	</LinearLayout>
  	

@@ -1,10 +1,10 @@
 package com.tcc.infracoesurbanas;
 
-import com.tcc.infracoesurbanas.R;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -22,4 +22,13 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    public void onEnterButonClick(View v){
+    	Intent i = new Intent();
+    	i.setClass(this, Cadastre.class);
+    	startActivity(i);
+    }
+    
+    public void onCleanButtonClick(View v){
+    	
+    }
 }

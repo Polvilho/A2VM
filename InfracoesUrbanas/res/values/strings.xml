@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Infrações Urbanas Mobile</string>
+    <string name="app_name">A2VM</string>
+    <string name="applicationName">A2VM</string>
+    <string name="appDescription">Autuador Veicular via Mobile</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="applicationName">Infrações Urbanas Mobile</string>
     <string name="loginField">Login:</string>
     <string name="passwordField">Senha:</string>
     <string name="buttonEnter">Entrar</string>
@@ -26,6 +27,11 @@
     <string name="dateText">Data da Autuação:</string>
     <string name="hourText">Hora:</string>
     <string name="cadastreButton">Cadastrar</string>
+    <string name="buttonBack">Menu</string>
+    <string name="buttonPhotograph">Fotografar</string>
+    <string name="toCadastreText">Cadastro de Autuações</string>
+    <string name="toInquiryText">Consulta de Autuações</string>
+    <string name="logoutText">Log Out</string>
     
     <string-array name="year">
     	<item>1960</item>
