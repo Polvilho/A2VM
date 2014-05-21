@@ -22,9 +22,10 @@
             </intent-filter>
         </activity>
         
-        <activity android:name=".Option" android:label="Option"></activity>
-        <activity android:name=".Cadastre" android:label="Cadastre"></activity>
-        <activity android:name=".Inquiry" android:label="Inquiry"></activity>
+        <activity android:name=".Option"></activity>
+        <activity android:name=".Cadastre"></activity>
+        <activity android:name=".Inquiry"></activity>
+        <activity android:name=".Menu"></activity>
         
     </application>
 
