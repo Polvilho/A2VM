@@ -28,7 +28,7 @@
     <string name="hourText">Hora:</string>
     <string name="cadastreButton">Cadastrar</string>
     <string name="buttonBack">Menu</string>
-    <string name="buttonPhotograph">Fotografar</string>
+    <string name="buttonCapture">Capturar</string>
     <string name="toCadastreText">Cadastro de Autuações</string>
     <string name="toInquiryText">Consulta de Autuações</string>
     <string name="logoutText">Log Out</string>
