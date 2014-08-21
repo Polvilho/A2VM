@@ -16,6 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true" >
+
     </ScrollView>
     
     <LinearLayout
@@ -27,7 +28,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/boardText"
+            android:id="@+id/textView01"
             android:layout_width="75dp"
             android:layout_height="0dp"
             android:layout_marginLeft="10sp"
@@ -39,7 +40,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/boardEditText"
+            android:id="@+id/boardTextInquiry"
             android:layout_width="match_parent"
             android:layout_height="33dp"
             android:layout_marginLeft="60sp"
@@ -75,124 +76,196 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/cleanButtonInquiry"
+        android:id="@+id/backToMenuButtonInquiry"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="95dp"
         android:layout_height="35dp"
         android:layout_alignBaseline="@+id/captureButton"
         android:layout_alignBottom="@+id/captureButton"
         android:layout_alignRight="@+id/linearLayout1"
-        android:text="@string/buttonClean"
+        android:text="@string/buttonBack"
+        android:onClick="onBackToMenuButtonInquiryClick"
         android:textSize="13sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/modelText"
+        android:id="@+id/textView02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/consultButton"
-        android:layout_below="@+id/consultButton"
+        android:layout_alignLeft="@+id/TextView03"
+        android:layout_below="@+id/TextView03"
         android:layout_marginTop="18dp"
-        android:text="@string/vehicleModel"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/EditText01"
-        android:layout_width="120dp"
-        android:layout_height="33dp"
-        android:layout_alignLeft="@+id/modelText"
-        android:layout_below="@+id/modelText"
-        android:ems="10"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/EditText02"
-        android:layout_width="120dp"
-        android:layout_height="33dp"
-        android:layout_alignBaseline="@+id/EditText01"
-        android:layout_alignBottom="@+id/EditText01"
-        android:layout_alignRight="@+id/cleanButtonInquiry"
-        android:ems="10"
-        android:inputType="text" />
-
-    <TextView
-        android:id="@+id/companyText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/modelText"
-        android:layout_alignBottom="@+id/modelText"
-        android:layout_alignLeft="@+id/EditText02"
         android:text="@string/companyText"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/EditText03"
-        android:layout_width="80dp"
+        android:id="@+id/companyTextInquiry"
+        android:layout_width="110dp"
         android:layout_height="33dp"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView02"
+        android:layout_alignRight="@+id/TextView03"
+        android:layout_below="@+id/textView02"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="number" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/TextView03"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/consultButton"
+        android:layout_below="@+id/consultButton"
+        android:layout_marginTop="16dp"
+        android:gravity="left"
+        android:text="@string/textOrgao"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/modelTextInquiry"
+        android:layout_width="110dp"
+        android:layout_height="33dp"
+        android:layout_alignBaseline="@+id/companyTextInquiry"
+        android:layout_alignBottom="@+id/companyTextInquiry"
+        android:layout_alignLeft="@+id/textView03"
+        android:layout_alignRight="@+id/backToMenuButtonInquiry"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EditText01"
-        android:layout_below="@+id/EditText01"
-        android:layout_marginTop="16dp"
-        android:text="@string/yearText"
+        android:layout_alignBaseline="@+id/textView02"
+        android:layout_alignBottom="@+id/textView02"
+        android:layout_alignRight="@+id/captureButton"
+        android:text="@string/vehicleModel"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toLeftOf="@+id/cleanButtonInquiry"
+        android:layout_alignLeft="@+id/companyTextInquiry"
+        android:layout_centerVertical="true"
+        android:text="@string/yearText"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/yearTextInquiry"
+        android:layout_width="110dp"
+        android:layout_height="33dp"
+        android:layout_alignLeft="@+id/textView04"
+        android:layout_below="@+id/textView04"
+        android:layout_toLeftOf="@+id/captureButton"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/autuationTextInquiry"
+        android:layout_width="110dp"
+        android:layout_height="33dp"
+        android:layout_alignBaseline="@+id/yearTextInquiry"
+        android:layout_alignBottom="@+id/yearTextInquiry"
+        android:layout_alignLeft="@+id/TextView05"
+        android:layout_alignRight="@+id/modelTextInquiry"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/yearTextInquiry"
+        android:layout_below="@+id/yearTextInquiry"
+        android:layout_marginTop="14dp"
         android:text="@string/propertyText"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/EditText04"
+        android:id="@+id/textNameInquiry"
         android:layout_width="80dp"
         android:layout_height="33dp"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignRight="@+id/EditText02"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView06"
+        android:layout_alignRight="@+id/autuationTextInquiry"
+        android:layout_below="@+id/textView06"
         android:ems="10"
         android:inputType="text" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView07"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EditText03"
-        android:layout_below="@+id/EditText03"
+        android:layout_alignLeft="@+id/textNameInquiry"
+        android:layout_below="@+id/textNameInquiry"
         android:layout_marginTop="14dp"
-        android:text="@string/imageText"
+        android:text="@string/dateText"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="15sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <EditText
+        android:id="@+id/textDateInquiry"
+        android:layout_width="80dp"
+        android:layout_height="33dp"
+        android:layout_alignLeft="@+id/textView07"
+        android:layout_below="@+id/textView07"
+        android:layout_toLeftOf="@+id/modelTextInquiry"
+        android:ems="10"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/textHourInquiry"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_alignBaseline="@+id/textDateInquiry"
+        android:layout_alignBottom="@+id/textDateInquiry"
+        android:layout_alignLeft="@+id/textView08"
+        android:layout_alignRight="@+id/textNameInquiry"
+        android:ems="10"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/textView08"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/scrollView1"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignRight="@+id/EditText04"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="19dp"
-        android:src="@drawable/ic_launcher" android:contentDescription="@string/applicationName"/>
+        android:layout_alignBaseline="@+id/textView07"
+        android:layout_alignBottom="@+id/textView07"
+        android:layout_marginLeft="23dp"
+        android:layout_toRightOf="@+id/textView07"
+        android:text="@string/hourText"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/autuationTextInquiry"
+        android:layout_alignLeft="@+id/captureButton"
+        android:gravity="left"
+        android:text="@string/AutuationText"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/orgaoTextInquiry"
+        android:layout_width="110dp"
+        android:layout_height="33dp"
+        android:layout_alignBaseline="@+id/TextView03"
+        android:layout_alignBottom="@+id/TextView03"
+        android:layout_alignRight="@+id/textView08"
+        android:ems="10"
+        android:inputType="number" />
 	    
 </RelativeLayout>

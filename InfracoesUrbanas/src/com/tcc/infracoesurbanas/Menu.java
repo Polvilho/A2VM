@@ -24,4 +24,11 @@ public class Menu extends Activity{
 		i.setClass(this, Inquiry.class);
 		startActivity(i);
 	}
+	
+	public void onToLogoutButtonClick(View v) {
+		Intent i = new Intent();
+		i.setClass(this, MainActivity.class);
+		startActivity(i);
+	}
+	
 }

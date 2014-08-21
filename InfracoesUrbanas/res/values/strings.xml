@@ -9,7 +9,7 @@
     <string name="loginField">Login:</string>
     <string name="passwordField">Senha:</string>
     <string name="buttonEnter">Entrar</string>
-    <string name="buttonClean">Limpar</string>
+    <string name="buttonExit">Sair</string>
     <string name="vehicleConsulting">Consulta de Autuações</string>
     <string name="vehicleCadastre">Cadastro de Autuações</string>
     <string name="textOrgao">Órg Autuador:</string>
@@ -22,7 +22,6 @@
     <string name="companyText">Marca:</string>
     <string name="propertyText">Proprietário:</string>
     <string name="yearText">Ano:</string>
-    <string name="imageText">Imagem do Veículo:</string>
     <string name="captureText">Capturar</string>
     <string name="especieText">Espécie:</string>
     <string name="dateText">Data da Autuação:</string>
@@ -33,6 +32,7 @@
     <string name="toCadastreText">Cadastro de Autuações</string>
     <string name="toInquiryText">Consulta de Autuações</string>
     <string name="logoutText">Log Out</string>
+    <string name="emptyText"></string>
     
     <string-array name="year">
     	<item>1960</item>

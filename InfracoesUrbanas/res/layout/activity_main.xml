@@ -59,8 +59,8 @@
  	        android:text="@string/buttonEnter" />
  	    
  	    <Button
- 	        android:id="@+id/cleanButtonLogin"
- 	        android:text="@string/buttonClean"
+ 	        android:id="@+id/exitButton"
+ 	        android:text="@string/buttonExit"
  	        android:onClick="onCleanButtonClick"
  	        style="@style/buttonStyle" />
  	</LinearLayout>

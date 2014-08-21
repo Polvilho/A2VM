@@ -10,7 +10,7 @@ import com.tcc.model.Autuacao;
 
 public class AutuacaoREST {
 	
-	private static final String URL_WS = "http://10.0.2.2:8080/A2VMWebservice/autuacao/";
+	private static final String URL_WS = "http://localhost:8080/A2VMWebservice/autuacao/";
 	
 	public Autuacao getAutuacao (int id) throws Exception {
 		

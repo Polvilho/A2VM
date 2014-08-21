@@ -1,71 +1,96 @@
 package com.tcc.model;
 
-import java.io.Serializable;
-
-public class Autuacao implements Serializable{
+public class Autuacao {
 	
 	private int id;
-	private int idOrgaoAutuador;
+	private String orgaoAutuador;
 	private String placa;
-	private int idMarca;
-	private int idModelo;
-	private int ano;
+	private String marca;
+	private String modelo;
+	private String ano;
+	private String autuacao;
 	private String proprietario;
 	private String data;
 	private String hora;
+	
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getIdOrgaoAutuador() {
-		return idOrgaoAutuador;
+	
+	
+	public String getOrgaoAutuador() {
+		return orgaoAutuador;
 	}
-	public void setIdOrgaoAutuador(int idOrgaoAutuador) {
-		this.idOrgaoAutuador = idOrgaoAutuador;
+	public void setOrgaoAutuador(String orgaoAutuador) {
+		this.orgaoAutuador = orgaoAutuador;
 	}
+	
+	
 	public String getPlaca() {
 		return placa;
 	}
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
-	public int getIdMarca() {
-		return idMarca;
+	
+	
+	public String getMarca() {
+		return marca;
 	}
-	public void setIdMarca(int idMarca) {
-		this.idMarca = idMarca;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
-	public int getIdModelo() {
-		return idModelo;
+	
+	
+	public String getModelo() {
+		return modelo;
 	}
-	public void setIdModelo(int idModelo) {
-		this.idModelo = idModelo;
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
-	public int getAno() {
+	
+	
+	public String getAno() {
 		return ano;
 	}
-	public void setAno(int ano) {
+	public void setAno(String ano) {
 		this.ano = ano;
 	}
+	
+	
+	public String getAutuacao() {
+		return autuacao;
+	}
+	public void setAutuacao(String autuacao) {
+		this.autuacao = autuacao;
+	}
+	
+	
 	public String getProprietario() {
 		return proprietario;
 	}
 	public void setProprietario(String proprietario) {
 		this.proprietario = proprietario;
 	}
+	
+	
 	public String getData() {
 		return data;
 	}
 	public void setData(String data) {
 		this.data = data;
 	}
+	
+	
 	public String getHora() {
 		return hora;
 	}
 	public void setHora(String hora) {
 		this.hora = hora;
 	}
-
+	
 }
