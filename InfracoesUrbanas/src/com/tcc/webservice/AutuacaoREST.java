@@ -10,13 +10,13 @@ import com.tcc.model.Autuacao;
 
 public class AutuacaoREST {
 	
-	private static final String URL_WS = "http://localhost:8080/A2VMWebservice/autuacao/";
+	private static final String URL_WS = "http://10.0.2.2:8080/A2VMWebservice/autuacao/";
 	
 	public Autuacao getAutuacao (int id) throws Exception {
 		
 		String[] resposta = new WebServiceAutuacao().get(URL_WS + id);
 		
-		if (resposta[0].equals(200)) {
+		if (resposta[0].equals("200")) {
 			Gson gson = new Gson();
 			Autuacao autuacao = gson.fromJson(resposta[1], Autuacao.class);
 			return autuacao;
@@ -40,8 +40,7 @@ public class AutuacaoREST {
 				listaAutuacao.add(gson.fromJson(array.get(i), Autuacao.class));
 			}
 			return listaAutuacao;
-		}
-		else {
+		} else {
 			throw new Exception(resposta[1]);
 		}
 	}
@@ -50,12 +49,12 @@ public class AutuacaoREST {
 		
 		Gson gson = new Gson();
 		String autuacaoJSON = gson.toJson(autuacao);
+		
 		String[] resposta = new WebServiceAutuacao().post(URL_WS + "inserir", autuacaoJSON);
 		
-		if (resposta[0].equals(200)) {
+		if (resposta[0].equals("200")) {
 			return resposta[1];
-		}
-		else {
+		} else {
 			throw new Exception(resposta[1]);
 		}
 	}

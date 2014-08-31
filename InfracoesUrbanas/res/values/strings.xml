@@ -34,6 +34,36 @@
     <string name="logoutText">Log Out</string>
     <string name="emptyText"></string>
     
+    <string-array name="orgaoAutuador">
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+    </string-array>
+    
     <string-array name="year">
     	<item>1960</item>
         <item>1961</item>
@@ -91,6 +121,37 @@
   		<item>2013</item>
   		<item>2014</item>
   	</string-array>
+  	
+    <string-array name="autuacoes">
+        <item>Carteira vencida há mais de 30 dias</item>
+        <item>Não redução da velocidade em área escolar</item>
+        <item >Transitar na contamão</item>
+        <item>Circulação em calçadas, canteiros centrais ou acostamentos</item>
+        <item>Retorno em local proibido</item>
+        <item>Avanço no farol vermelho</item>
+        <item>Não preferência à passagem de pedestres</item>
+        <item>Não prestar socorro a vítimas de acidente de trânsito</item>
+        <item>Dirigir embriagado</item>
+        <item>Participar de rachas</item>
+        <item>Excesso de velocidade</item>
+        <item>Condução de veículo sem identificação ou licenciamento</item>
+        <item>Transpor bloqueio policial</item>
+        <item>Levar menores de 10 anos no banco da frente</item>
+        <item>Bloquear via Com veiculo</item>
+        <item>Não sinalização de manobra</item>
+        <item>Estacionar em calçadas ou faixas de pedestres</item>
+        <item>Estacionar em Fila dupla</item>
+        <item>Dirigir moto transportando menores de 7 anos</item>
+        <item>Seguir veículos em serviço de urgência</item>
+        <item>Não uso do cinto de segurança</item>
+        <item>Transitar com faróis desregulados</item>
+        <item>Ultrapassagem pelo acostamento</item>
+        <item>Dirigir veículo em mau estado de conservação</item>
+        <item>Ultrapassagem pela direita</item>
+        <item>Deixar de dar passagem pela esquerda</item>
+        <item>Dirigir com fones de ouvido ligados a aparelhos de som</item>
+        <item>Atirar objetos pela janela</item>
+    </string-array>
     
     <string-array name="company">
         <item >Agrale</item>
@@ -141,216 +202,6 @@
         <item >Troller</item>
         <item >Volkswagen</item>
         <item >Volvo</item>
-    </string-array>
-    
-    <string-array name="agraleModels">
-        <item >AM100</item>
-        <item >AM100 CD</item>
-        <item >AM150</item>
-        <item >AM150 CD</item>
-        <item >AM200</item>
-        <item >AM200 CD</item>
-        <item >AM200 Microbus</item>
-        <item >AM300</item>
-    </string-array>
-    
-    <string-array name="astonmartinModels">
-        <item >V8 Vantage</item>
-        <item >V8 Vantage S</item>
-        <item >V12 Vantage</item>
-        <item >V12 Vantage Roadster</item>
-        <item >Vantage N430</item>
-        <item >DB9</item>
-        <item >DB9 Carbon Edition</item>
-        <item >Rapide S</item>
-        <item >Vanquish</item>
-        <item >Vanquish Volante</item>
-    </string-array>
-    
-    <string-array name="audiModels">
-        <item >A1</item>
-        <item >A1 Sport</item>
-        <item >A1 Sportback</item>
-        <item >A3 Sport</item>
-        <item >A3 Sportback</item>
-        <item >A3 Sedan</item>
-        <item >A4 Sedan</item>
-        <item >A4 Avant</item>
-        <item >S4 Sedan</item>
-        <item >S4 Avant</item>
-        <item >RS4 Avant</item>
-        <item >A5 Coupé</item>
-        <item >A5 Sportback</item>
-        <item >A5 Cabriolet</item>
-        <item >S5 Coupé</item>
-        <item >S5 Sportback</item>
-        <item >S5 Cabriolet</item>
-        <item >RS5 Coupé</item>
-        <item >A6 Sedan</item>
-        <item >A6 Avant</item>
-        <item >A6 Allroad Quattro</item>
-        <item >S6 Avant</item>
-        <item >S6 Sedan</item>
-        <item >R55 Coupé</item>
-        <item >A7 Sportback</item>
-        <item >S7 Sportback</item>
-        <item >A8</item>
-        <item >A8LW12</item>
-        <item >S8</item>
-        <item >Q3</item>
-        <item >Q5</item>
-        <item >Q7</item>
-        <item >R8 V10 Plus</item>
-    </string-array>
-    
-    <string-array name="bentleyModels">
-        <item >Bentley SUV</item>
-        <item >Bentley Mulsanne</item>
-        <item >Bentley New Flying Spur</item>
-        <item >Continenetal GT</item>
-        <item >Continental GT Convertible</item>
-    </string-array>
-    
-    <string-array name="bmwModels">
-        <item >Serie 1 116i</item>
-        <item >Serie 1 118i</item>
-        <item >Serie 1 125i M Sport</item>
-        <item >Serie 1 M135</item>
-        <item >Serie 3 315i</item>
-        <item >Serie 3 320i</item>
-        <item >Serie 3 328i</item>
-        <item >Serie 3 320i GT Sport</item>
-        <item >Serie 3 328i GT M Sport</item>
-        <item >Serie 3 335i M Sport</item>
-        <item >Serie 5 528i M Sport</item>
-        <item >Serie 5 538i M Sport</item>
-        <item >Serie 6 640i</item>
-        <item >Serie 6 650i</item>
-        <item >Serie 7 750i M Sport</item>
-        <item >X1 sDrive 18i</item>
-        <item >X1 sDrive 20i</item>
-        <item >X3 xDrive 20i</item>
-        <item >X3 xDrive 28i</item>
-        <item >X3 sDrive 35i M Sport</item>
-        <item >X5 xDrive 50i</item>
-        <item >X6 xDrive 50i</item>
-        <item >x6 M</item>
-        <item >Z4 Roadster</item>
-        <item >M5</item>
-        <item >M6 Grand Coupé</item>
-        <item >M6 Coupé</item>
-        <item >X6 M</item>
-    </string-array>
-    
-    <string-array name="changanModels">
-        <item >Mini Star CS</item>
-        <item >Star CS</item>
-        <item >Star Family</item>
-        <item >Star Utility</item>
-        <item >Mini Star CE</item>
-    </string-array>
-    
-    <string-array name="cherryModels">
-        <item >Tiggo</item>
-        <item >Celer</item>
-        <item >QQ</item>
-        <item >Face</item>
-    </string-array>
-    
-    <string-array name="gmModels">
-        <item >Agile</item>
-        <item >Camaro</item>
-        <item >Celta</item>
-        <item >Classic</item>
-        <item >Cobalt</item>
-        <item >Cruze</item>
-        <item >Cruze Sport</item>
-        <item >Onix</item>
-        <item >Prisma</item>
-        <item >Sonic Sedan</item>
-        <item >Sonic Hatch</item>
-        <item >Captiva</item>
-        <item >TrailBlazer</item>
-        <item >Montana</item>
-        <item >S10 Cabine Dupla</item>
-        <item >S10 Cabine Simples</item>
-        <item >Tracker</item>
-        <item >Spin</item>
-        <item >Volt</item>
-    </string-array>
-    
-    <string-array name="cryslerModels">
-        <item >300C</item>
-        <item >Town and Country Limited</item>
-        <item >Town and Country Touring</item>
-    </string-array>
-	
-    <string-array name="citroenModels">
-        <item >C3</item>
-        <item >C3 Picasso</item>
-        <item >AirCross</item>
-        <item >C4</item>
-        <item >C4 Lounge</item>
-        <item >C4 Picasso</item>
-        <item >Grand C4 Picasso</item>
-        <item >DS3</item>
-        <item >DS4</item>
-        <item >DS5</item>
-        <item >Jumper Vetrato</item>
-        <item >Jumper Furgão</item>
-        <item >Jumper Mini-Bus</item>
-    </string-array>	
-    
-    <string-array name="dodgeModels">
-        <item >Avenger</item>
-        <item >Challenger</item>
-        <item >Charger</item>
-        <item >Dart</item>
-        <item >Durango</item>
-        <item >Journey</item>
-        <item >Grand Caravan</item>
-        <item >SRT</item>
-    </string-array>
-    
-    <string-array name="effaModels">
-        <item >Picape Start Longa</item>
-        <item >Picape Start Cabine Dupla</item>
-        <item >Van Start</item>
-        <item >Caminhão EFFA JBC</item>
-        <item >Caminhão EFFA JMC N601</item>
-        <item >Caminhão EFFA JMC N900</item>
-        <item >Picape Plutus</item>
-        <item >Picape/Longa</item>
-        <item >Picape Baú</item>
-        <item >Furgão/EFFA</item>
-        <item >Van EFFA</item>
-        <item >Picape Cabine Dupla EFFA</item>
-        <item >EFFA M100</item>
-    </string-array>
-    
-    <string-array name="ferrariModels">
-        <item >F12 Berlinetta</item>
-        <item >FF</item>
-        <item >LaFerrari</item>
-        <item >Ferrari California T</item>
-        <item >458 Italia</item>
-        <item >458 Spider</item>
-        <item >458 Speciale</item>
-    </string-array>
-    
-    <string-array name="fiatModels">
-        <item >UNO</item>
-        <item >Palio Fire</item>
-        <item >Palio</item>
-        <item >Punto</item>
-        <item >Bravo</item>
-        <item >Fiat 500</item>
-        <item >Siena</item>
-        <item >Grand Siena</item>
-        <item >Linea</item>
-        <item >Palio Weekend</item>
-        <item >Fiat Adventure</item>
-        <item >Strada</item>
     </string-array>
      
 </resources>

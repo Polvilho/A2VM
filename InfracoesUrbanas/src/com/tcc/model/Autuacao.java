@@ -1,6 +1,8 @@
 package com.tcc.model;
 
-public class Autuacao {
+import java.io.Serializable;
+
+public class Autuacao implements Serializable{
 	
 	private int id;
 	private String orgaoAutuador;
@@ -91,6 +93,20 @@ public class Autuacao {
 	}
 	public void setHora(String hora) {
 		this.hora = hora;
+	}
+	
+	@Override
+	public String toString() {
+		return "ID: " + this.id +
+				"\nOrgao Autuador: " + this.orgaoAutuador +
+				"\nPlaca: " + this.placa +
+				"\nMarca: " + this.marca +
+				"\nModelo: " + this.modelo +
+				"\nAno: " + this.ano +
+				"\nAutuacao: " + this.autuacao +
+				"\nProprietario: " + this.proprietario +
+				"\nData da Autuacao: " + this.data +
+				"\nHora da Autuacao: " + this.hora;
 	}
 	
 }

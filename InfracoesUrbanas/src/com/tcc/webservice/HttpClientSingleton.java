@@ -25,7 +25,7 @@ public class HttpClientSingleton {
 	}
 	
 	public static DefaultHttpClient getHttpClientInstance() {
-		if (instance == null)
+		if (instance==null)
 			instance = new HttpClientSingleton();
 		return instance.httpClient;
 	}

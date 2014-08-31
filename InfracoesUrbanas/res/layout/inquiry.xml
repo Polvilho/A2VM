@@ -46,7 +46,7 @@
             android:layout_marginLeft="60sp"
             android:layout_marginTop="-25dp"
             android:ems="10"
-            android:inputType="text" >
+            android:inputType="none" >
             <requestFocus />
         </EditText>
 
@@ -108,7 +108,7 @@
         android:layout_alignRight="@+id/TextView03"
         android:layout_below="@+id/textView02"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="none" />
 
     <TextView
         android:id="@+id/TextView03"
@@ -132,7 +132,7 @@
         android:layout_alignLeft="@+id/textView03"
         android:layout_alignRight="@+id/backToMenuButtonInquiry"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="none" />
 
     <TextView
         android:id="@+id/textView03"
@@ -176,7 +176,7 @@
         android:layout_alignLeft="@+id/TextView05"
         android:layout_alignRight="@+id/modelTextInquiry"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="none" />
 
     <TextView
         android:id="@+id/textView06"
@@ -264,8 +264,9 @@
         android:layout_height="33dp"
         android:layout_alignBaseline="@+id/TextView03"
         android:layout_alignBottom="@+id/TextView03"
-        android:layout_alignRight="@+id/textView08"
+        android:layout_alignLeft="@+id/captureButton"
+        android:layout_alignRight="@+id/backToMenuButtonInquiry"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="none" />
 	    
 </RelativeLayout>

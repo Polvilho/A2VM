@@ -7,8 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
+    
     <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,12 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+        <activity android:name=".activity.ListaAutuacoes"></activity>
         <activity android:name=".Option"></activity>
         <activity android:name=".Cadastre"></activity>
         <activity android:name=".Inquiry"></activity>
-        <activity android:name=".Menu"></activity>
-        
+        <activity android:name=".Menu"></activity>  
     </application>
 
 </manifest>

@@ -9,22 +9,10 @@ package com.tcc.infracoesurbanas;
 
 public final class R {
     public static final class array {
-        public static final int agraleModels=0x7f070002;
-        public static final int astonmartinModels=0x7f070003;
-        public static final int audiModels=0x7f070004;
-        public static final int bentleyModels=0x7f070005;
-        public static final int bmwModels=0x7f070006;
-        public static final int changanModels=0x7f070007;
-        public static final int cherryModels=0x7f070008;
-        public static final int citroenModels=0x7f07000b;
-        public static final int company=0x7f070001;
-        public static final int cryslerModels=0x7f07000a;
-        public static final int dodgeModels=0x7f07000c;
-        public static final int effaModels=0x7f07000d;
-        public static final int ferrariModels=0x7f07000e;
-        public static final int fiatModels=0x7f07000f;
-        public static final int gmModels=0x7f070009;
-        public static final int year=0x7f070000;
+        public static final int autuacoes=0x7f070002;
+        public static final int company=0x7f070003;
+        public static final int orgaoAutuador=0x7f070000;
+        public static final int year=0x7f070001;
     }
     public static final class attr {
     }
@@ -43,64 +31,60 @@ public final class R {
     }
     public static final class id {
         public static final int TextView01=0x7f090007;
-        public static final int TextView02=0x7f090016;
-        public static final int TextView03=0x7f09000a;
-        public static final int TextView05=0x7f09002a;
-        public static final int action_settings=0x7f090034;
+        public static final int TextView03=0x7f090016;
+        public static final int TextView05=0x7f090025;
+        public static final int action_settings=0x7f09002f;
         public static final int authenticationLogin=0x7f090002;
         public static final int authenticationPassword=0x7f090004;
-        public static final int autuationTextInquiry=0x7f090029;
-        public static final int backToMenuButtonCadastre=0x7f09001d;
-        public static final int backToMenuButtonInquiry=0x7f090023;
-        public static final int boardTextCadastre=0x7f09000b;
-        public static final int boardTextInquiry=0x7f090020;
-        public static final int button1=0x7f090033;
-        public static final int cadastreButton=0x7f09001c;
-        public static final int captureButton=0x7f090022;
-        public static final int companySpinner=0x7f090017;
-        public static final int companyTextInquiry=0x7f090025;
-        public static final int consultButton=0x7f090021;
-        public static final int dateTextCadastre=0x7f090012;
+        public static final int autuationTextInquiry=0x7f090024;
+        public static final int backToMenuButtonCadastre=0x7f090012;
+        public static final int backToMenuButtonInquiry=0x7f09001e;
+        public static final int boardTextCadastre=0x7f090008;
+        public static final int boardTextInquiry=0x7f09001b;
+        public static final int button1=0x7f09002e;
+        public static final int cadastreButton=0x7f090011;
+        public static final int captureButton=0x7f09001d;
+        public static final int companySpinner=0x7f09000e;
+        public static final int companyTextInquiry=0x7f090020;
+        public static final int consultButton=0x7f09001c;
         public static final int enterButton=0x7f090005;
         public static final int exitButton=0x7f090006;
-        public static final int hourTextCadastre=0x7f090010;
-        public static final int infractionNumberTextCadastre=0x7f090009;
         public static final int linearLayout1=0x7f090000;
         public static final int login=0x7f090001;
-        public static final int modelSpinner=0x7f09000e;
-        public static final int modelTextInquiry=0x7f090026;
-        public static final int orgaoSpinner=0x7f090008;
-        public static final int orgaoTextInquiry=0x7f09002e;
+        public static final int modeText=0x7f090018;
+        public static final int modelTextInquiry=0x7f090021;
+        public static final int orgaoSpinner=0x7f090017;
+        public static final int orgaoTextInquiry=0x7f090029;
         public static final int password=0x7f090003;
-        public static final int scrollView1=0x7f09001e;
-        public static final int spinnerAutuacao=0x7f09001b;
-        public static final int textDateInquiry=0x7f09002c;
-        public static final int textHourInquiry=0x7f09002d;
-        public static final int textNameCadastre=0x7f090011;
-        public static final int textNameInquiry=0x7f09002b;
-        public static final int textView01=0x7f09001f;
-        public static final int textView02=0x7f090024;
-        public static final int textView03=0x7f090027;
-        public static final int textView04=0x7f09000c;
-        public static final int textView05=0x7f09000d;
-        public static final int textView06=0x7f09000f;
-        public static final int textView07=0x7f090015;
-        public static final int textView08=0x7f09001a;
-        public static final int textView09=0x7f090018;
-        public static final int textView1=0x7f09002f;
-        public static final int textView10=0x7f090013;
-        public static final int textView11=0x7f090019;
-        public static final int textView2=0x7f090030;
-        public static final int toCadastreButton=0x7f090031;
-        public static final int toInquiryButton=0x7f090032;
-        public static final int yearSpinner=0x7f090014;
-        public static final int yearTextInquiry=0x7f090028;
+        public static final int scrollView1=0x7f090019;
+        public static final int spinnerAutuacao=0x7f090013;
+        public static final int textDateInquiry=0x7f090027;
+        public static final int textHourInquiry=0x7f090028;
+        public static final int textNameCadastre=0x7f09000a;
+        public static final int textNameInquiry=0x7f090026;
+        public static final int textView01=0x7f09001a;
+        public static final int textView02=0x7f09001f;
+        public static final int textView03=0x7f090022;
+        public static final int textView04=0x7f090009;
+        public static final int textView05=0x7f09000b;
+        public static final int textView06=0x7f090015;
+        public static final int textView07=0x7f09000d;
+        public static final int textView08=0x7f090014;
+        public static final int textView09=0x7f09000f;
+        public static final int textView1=0x7f09002a;
+        public static final int textView12=0x7f090010;
+        public static final int textView2=0x7f09002b;
+        public static final int toCadastreButton=0x7f09002c;
+        public static final int toInquiryButton=0x7f09002d;
+        public static final int yearSpinner=0x7f09000c;
+        public static final int yearTextInquiry=0x7f090023;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int cadastre=0x7f030001;
         public static final int inquiry=0x7f030002;
-        public static final int menu=0x7f030003;
+        public static final int list_item=0x7f030003;
+        public static final int menu=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f080000;
