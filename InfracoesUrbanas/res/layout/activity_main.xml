@@ -2,67 +2,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFE0"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#FFFFE0"
     tools:context=".MainActivity" >
-	
- 	<LinearLayout 
- 	    android:id="@+id/linearLayout1"
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:orientation="vertical" >
- 	    
- 	    <TextView
- 	        android:id="@+id/login"
- 	        style="@style/loginStyle"
- 	        android:textSize="20sp"
- 	        android:layout_height="30dp"
- 	        android:text="@string/loginField"
- 	        android:textAppearance="?android:attr/textAppearanceLarge" />
- 	    
- 	    <EditText
- 	        android:id="@+id/authenticationLogin"
- 	        android:layout_width="match_parent"
- 	        android:layout_height="wrap_content"
- 	        android:inputType="text" >
- 	    	<requestFocus />
- 	    </EditText>
- 	    
- 	    <TextView
- 	        android:id="@+id/password"
- 	        style="@style/loginStyle"
- 	        android:layout_height="30dp"
- 	        android:text="@string/passwordField"
- 	        android:textAppearance="?android:attr/textAppearanceLarge" />
- 	    
- 	    <EditText
- 	        android:id="@+id/authenticationPassword"
- 	        android:layout_width="match_parent"
- 	        android:layout_height="wrap_content"
- 	        android:inputType="textPassword" />
- 	</LinearLayout>
-    
- 	<LinearLayout 		android:layout_below="@+id/linearLayout1"
- 	    android:layout_width="wrap_content"
- 	    android:layout_height="wrap_content"
- 	    android:layout_centerHorizontal="true" >
- 	    
- 	    <Button
- 	        android:id="@+id/enterButton"
- 	        style="@style/buttonStyle"
- 	        android:onClick="onEnterButtonClick"
- 	        android:text="@string/buttonEnter" />
- 	    
- 	    <Button
- 	        android:id="@+id/exitButton"
- 	        android:text="@string/buttonExit"
- 	        android:onClick="onCleanButtonClick"
- 	        style="@style/buttonStyle" />
- 	</LinearLayout>
- 	
+
+        <TextView
+            android:id="@+id/login"
+            style="@style/loginStyle"
+            android:layout_height="30dp"
+            android:text="@string/loginField"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/authenticationLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/password"
+            style="@style/loginStyle"
+            android:layout_height="30dp"
+            android:text="@string/passwordField"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/authenticationPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/enterButton"
+            style="@style/buttonStyle"
+            android:layout_width="180sp"
+            android:onClick="onEnterButtonClick"
+            android:text="@string/buttonEnter" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMessageLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textColor="#FF0000"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
 </RelativeLayout>

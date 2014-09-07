@@ -6,14 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tcc.model.Autuacao;
 import com.tcc.webservice.AutuacaoREST;
-//import android.widget.EditText;
-//import android.widget.Spinner;
 
 public class Cadastre extends Activity{
 	
@@ -22,15 +21,13 @@ public class Cadastre extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cadastre);
 		
-		//EditText editTextIDInfracao = (EditText) findViewById(R.id.infractionNumberTextCadastre);
-		//EditText editTextPlaca = (EditText) findViewById(R.id.boardTextCadastre);
-		//EditText editTextName = (EditText) findViewById(R.id.textNameCadastre);
-		//EditText editTextData = (EditText) findViewById(R.id.dateTextCadastre);
-		//EditText editTextHora = (EditText) findViewById(R.id.hourTextCadastre);
-		Spinner spinnerOrgao = (Spinner) findViewById(R.id.orgaoSpinner);
-		Spinner spinnerMarca = (Spinner) findViewById(R.id.companySpinner);
-		Spinner spinnerAno = (Spinner) findViewById(R.id.yearSpinner);
-		Spinner spinnerAutuacao = (Spinner) findViewById(R.id.spinnerAutuacao);
+		final EditText editTextPlaca = (EditText) findViewById(R.id.boardTextCadastre);
+		final EditText editTextName = (EditText) findViewById(R.id.textNameCadastre);
+		final EditText editTextModelo = (EditText) findViewById(R.id.modelText);
+		final Spinner spinnerOrgao = (Spinner) findViewById(R.id.orgaoSpinner);
+		final Spinner spinnerMarca = (Spinner) findViewById(R.id.companySpinner);
+		final Spinner spinnerAno = (Spinner) findViewById(R.id.yearSpinner);
+		final Spinner spinnerAutuacao = (Spinner) findViewById(R.id.spinnerAutuacao);
 		Button buttonCadastrar = (Button) findViewById(R.id.cadastreButton);
 		final TextView textMessage = (TextView) findViewById(R.id.textView12);
 		
@@ -69,16 +66,13 @@ public class Cadastre extends Activity{
 			@Override
 			public void onClick(View v) {
 				Autuacao autuacao = new Autuacao();
-				autuacao.setId(2);
-				autuacao.setOrgaoAutuador("SP");
-				autuacao.setPlaca("FHB-8080");
-				autuacao.setMarca("KIA");
-				autuacao.setModelo("Ceratto");
-				autuacao.setAno("2014");
-				autuacao.setAutuacao("Celular ao Volante");
-				autuacao.setProprietario("Ronaldo da Silva");
-				autuacao.setData("2014/08/19");
-				autuacao.setHora("18:00:00");
+				autuacao.setOrgaoAutuador(spinnerOrgao.getSelectedItem().toString());
+				autuacao.setPlaca(editTextPlaca.getText().toString());
+				autuacao.setMarca(spinnerMarca.getSelectedItem().toString());
+				autuacao.setModelo(editTextModelo.getText().toString());
+				autuacao.setAno(spinnerAno.getSelectedItem().toString());
+				autuacao.setAutuacao(spinnerAutuacao.getSelectedItem().toString());
+				autuacao.setProprietario(editTextName.getText().toString());
 				
 				AutuacaoREST autuacaoREST = new AutuacaoREST();
 				
@@ -90,7 +84,7 @@ public class Cadastre extends Activity{
 					gerarToast(e.getMessage());
 				}
 			}
-		});	
+		});
 	}
 	
 	private void gerarToast(CharSequence message) {

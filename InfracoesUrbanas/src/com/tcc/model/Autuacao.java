@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class Autuacao implements Serializable{
 	
-	private int id;
 	private String orgaoAutuador;
 	private String placa;
 	private String marca;
@@ -14,14 +13,6 @@ public class Autuacao implements Serializable{
 	private String proprietario;
 	private String data;
 	private String hora;
-	
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	
 	public String getOrgaoAutuador() {
@@ -97,8 +88,7 @@ public class Autuacao implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "ID: " + this.id +
-				"\nOrgao Autuador: " + this.orgaoAutuador +
+		return "\nOrgao Autuador: " + this.orgaoAutuador +
 				"\nPlaca: " + this.placa +
 				"\nMarca: " + this.marca +
 				"\nModelo: " + this.modelo +
