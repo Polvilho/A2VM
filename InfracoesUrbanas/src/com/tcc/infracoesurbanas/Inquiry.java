@@ -20,6 +20,9 @@ public class Inquiry extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inquiry);
         
+        Intent i = getIntent();
+        placa = i.getStringExtra("recognizedBoard");
+        
         final EditText editTextPlaca = (EditText) findViewById(R.id.boardTextInquiry);
     	final EditText editTextAutuacao = (EditText) findViewById(R.id.autuationTextInquiry);
     	final EditText editTextMarca = (EditText) findViewById(R.id.companyTextInquiry);
@@ -30,7 +33,9 @@ public class Inquiry extends Activity{
     	final EditText editTextData = (EditText) findViewById(R.id.textDateInquiry);
     	final EditText editTextHora = (EditText) findViewById(R.id.textHourInquiry);
     	Button buttonConsultar = (Button) findViewById(R.id.consultButton);
-    	Button buttonCapturar = (Button) findViewById(R.id.captureButton);
+    	//Button buttonCapturar = (Button) findViewById(R.id.captureButton);
+    	
+    	editTextPlaca.setText(placa);
     	
     	buttonConsultar.setOnClickListener(new View.OnClickListener() {
 			
@@ -58,15 +63,7 @@ public class Inquiry extends Activity{
 				}
 			}
 		});
-    	
-    	buttonCapturar.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent("com.datumdroid.android.ocr.simple.OCR_ACTIVITY");
-				startActivity(intent);
-			}
-		});
+		
 	}
 	
 	private void gerarToast(CharSequence message) {
@@ -79,6 +76,12 @@ public class Inquiry extends Activity{
 	public void onBackToMenuButtonInquiryClick(View v) {
 		Intent i = new Intent();
 		i.setClass(this, Menu.class);
+		startActivity(i);
+	}
+	
+	public void onCaptureButtonInquiryClick(View v) {
+		Intent i = new Intent();
+		i.setClass(this, SimpleAndroidOCRActivity.class);
 		startActivity(i);
 	}
 	

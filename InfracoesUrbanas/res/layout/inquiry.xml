@@ -72,6 +72,7 @@
         android:layout_alignBottom="@+id/consultButton"
         android:layout_centerHorizontal="true"
         android:text="@string/captureText"
+        android:onClick="onCaptureButtonInquiryClick"
         android:textSize="13sp"
         android:textStyle="bold" />
 

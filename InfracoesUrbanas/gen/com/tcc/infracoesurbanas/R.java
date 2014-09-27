@@ -34,7 +34,7 @@ public final class R {
         public static final int TextView03=0x7f090018;
         public static final int TextView05=0x7f090029;
         public static final int TextView12=0x7f09002b;
-        public static final int action_settings=0x7f090031;
+        public static final int action_settings=0x7f090034;
         public static final int authenticationLogin=0x7f090002;
         public static final int authenticationPassword=0x7f090004;
         public static final int autuationTextInquiry=0x7f090026;
@@ -42,13 +42,16 @@ public final class R {
         public static final int backToMenuButtonInquiry=0x7f09001f;
         public static final int boardTextCadastre=0x7f090009;
         public static final int boardTextInquiry=0x7f09001c;
+        public static final int button=0x7f090032;
         public static final int button1=0x7f090030;
+        public static final int buttonImport=0x7f090033;
         public static final int cadastreButton=0x7f090011;
         public static final int captureButton=0x7f09001e;
         public static final int companySpinner=0x7f09000f;
         public static final int companyTextInquiry=0x7f090021;
         public static final int consultButton=0x7f09001d;
         public static final int enterButton=0x7f090006;
+        public static final int field=0x7f090031;
         public static final int linearLayout1=0x7f090000;
         public static final int linearLayout2=0x7f090005;
         public static final int login=0x7f090001;
@@ -87,6 +90,7 @@ public final class R {
         public static final int inquiry=0x7f030002;
         public static final int list_item=0x7f030003;
         public static final int menu=0x7f030004;
+        public static final int ocr=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -107,13 +111,16 @@ public final class R {
         public static final int companyText=0x7f060012;
         public static final int consultButton=0x7f060010;
         public static final int dateText=0x7f060017;
-        public static final int emptyText=0x7f06001f;
+        public static final int emptyText=0x7f060022;
         public static final int especieText=0x7f060016;
         public static final int hello_world=0x7f060004;
         public static final int hourText=0x7f060018;
         public static final int infractionText=0x7f06000d;
         public static final int loginField=0x7f060005;
         public static final int logoutText=0x7f06001e;
+        public static final int ocrBoardText=0x7f06001f;
+        public static final int ocrImport=0x7f060021;
+        public static final int ocrPicture=0x7f060020;
         public static final int passwordField=0x7f060006;
         public static final int propertyText=0x7f060013;
         public static final int textOrgao=0x7f06000b;

@@ -32,6 +32,9 @@
     <string name="toCadastreText">Cadastro de Autuações</string>
     <string name="toInquiryText">Consulta de Autuações</string>
     <string name="logoutText">Log Out</string>
+    <string name="ocrBoardText">Placa</string>
+    <string name="ocrPicture">Tirar Foto</string>
+    <string name="ocrImport">Importar</string>
     <string name="emptyText"></string>
     
     <string-array name="orgaoAutuador">
