@@ -30,6 +30,7 @@ public class Inquiry extends Activity{
     	final EditText editTextData = (EditText) findViewById(R.id.textDateInquiry);
     	final EditText editTextHora = (EditText) findViewById(R.id.textHourInquiry);
     	Button buttonConsultar = (Button) findViewById(R.id.consultButton);
+    	Button buttonCapturar = (Button) findViewById(R.id.captureButton);
     	
     	buttonConsultar.setOnClickListener(new View.OnClickListener() {
 			
@@ -56,7 +57,16 @@ public class Inquiry extends Activity{
 					gerarToast(e.getMessage());
 				}
 			}
-		}); 
+		});
+    	
+    	buttonCapturar.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent("com.datumdroid.android.ocr.simple.OCR_ACTIVITY");
+				startActivity(intent);
+			}
+		});
 	}
 	
 	private void gerarToast(CharSequence message) {
