@@ -5,7 +5,7 @@ import com.tcc.model.Usuario;
 
 public class UsuarioREST {
 	
-	private static final String URL_WS = "http://192.168.1.104:8080/A2VMWebservice/usuario/";
+	private static final String URL_WS = "http://192.168.1.106:8080/A2VMWebservice/usuario/";
 	
 	public Usuario getUsuario (String user) throws Exception {
 		

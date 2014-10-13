@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			textMessage.setText("Usuário Inválido");
+			textMessage.setText("Usuário ou Senha Incorreto");
 		}
     }
     

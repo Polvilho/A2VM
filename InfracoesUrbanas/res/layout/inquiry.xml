@@ -1,268 +1,371 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#FFFFE0"
-    tools:context=".MainActivity" >
-    
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" >
-
-    </ScrollView>
+    android:orientation="vertical" >
     
     <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/scrollView1"
-        android:layout_alignRight="@+id/scrollView1"
-        android:orientation="vertical" >
+        android:background="#FFFFE0"
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/textView01"
-            android:layout_width="75dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="0.34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:paddingTop="10sp"
             android:text="@string/boardText"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textSize="15sp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/boardTextInquiry"
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginLeft="60sp"
-            android:layout_marginTop="-25dp"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
             android:ems="10"
             android:inputType="none" >
-            <requestFocus />
         </EditText>
-
-	</LinearLayout>
-
-    <Button
-        android:id="@+id/consultButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="95dp"
-        android:layout_height="35dp"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_below="@+id/linearLayout1"
-        android:text="@string/consultButton"
-        android:textSize="13sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/captureButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="95dp"
-        android:layout_height="35dp"
-        android:layout_alignBaseline="@+id/consultButton"
-        android:layout_alignBottom="@+id/consultButton"
-        android:layout_centerHorizontal="true"
-        android:text="@string/captureText"
-        android:onClick="onCaptureButtonInquiryClick"
-        android:textSize="13sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/backToMenuButtonInquiry"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="95dp"
-        android:layout_height="35dp"
-        android:layout_alignBaseline="@+id/captureButton"
-        android:layout_alignBottom="@+id/captureButton"
-        android:layout_alignRight="@+id/linearLayout1"
-        android:text="@string/buttonBack"
-        android:onClick="onBackToMenuButtonInquiryClick"
-        android:textSize="13sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/modelTextInquiry"
-        android:layout_width="110dp"
-        android:layout_height="40sp"
-        android:layout_alignBaseline="@+id/companyTextInquiry"
-        android:layout_alignBottom="@+id/companyTextInquiry"
-        android:layout_alignLeft="@+id/textView03"
-        android:layout_alignRight="@+id/backToMenuButtonInquiry"
-        android:ems="10"
-        android:inputType="none" />
-
-    <TextView
-        android:id="@+id/textView03"
-        android:layout_width="wrap_content"
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView02"
-        android:layout_alignBottom="@+id/textView02"
-        android:layout_alignRight="@+id/captureButton"
-        android:text="@string/vehicleModel"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:background="#FFFFE0"
+        android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/textView06"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/consultButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:text="@string/consultButton"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/captureButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10sp"
+            android:onClick="onCaptureButtonInquiryClick"
+            android:text="@string/captureText"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/yearTextInquiry"
-        android:layout_below="@+id/yearTextInquiry"
-        android:layout_marginTop="14dp"
-        android:text="@string/propertyText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:background="#FFFFE0"
+        android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/textNameInquiry"
-        android:layout_width="80dp"
-        android:layout_height="40sp"
-        android:layout_alignLeft="@+id/textView06"
-        android:layout_alignRight="@+id/autuationTextInquiry"
-        android:layout_below="@+id/textView06"
-        android:ems="10"
-        android:inputType="text" />
+        <Button
+            android:id="@+id/goToCadastreButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10sp"
+            android:onClick="goToCadastreClick"
+            android:text="@string/toCadastreText"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/textDateInquiry"
-        android:layout_width="80dp"
-        android:layout_height="40sp"
-        android:layout_alignLeft="@+id/textView07"
-        android:layout_alignRight="@+id/textView07"
-        android:layout_below="@+id/textView07"
-        android:ems="10"
-        android:inputType="date" />
+        <Button
+            android:id="@+id/backToMenuButtonInquiry"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10sp"
+            android:onClick="onBackToMenuButtonInquiryClick"
+            android:text="@string/buttonBack"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/textHourInquiry"
-        android:layout_width="100dp"
-        android:layout_height="40sp"
-        android:layout_alignBaseline="@+id/textDateInquiry"
-        android:layout_alignBottom="@+id/textDateInquiry"
-        android:layout_alignLeft="@+id/textView08"
-        android:layout_alignRight="@+id/scrollView1"
-        android:ems="10"
-        android:inputType="time" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="vertical" >
+		        
+                <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:background="#FFFFE0"
+			        android:orientation="vertical" >
+			        
+	                <TextView
+				        android:id="@+id/TextView02"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="10sp"
+				        android:layout_marginLeft="10sp"
+				        android:text="@string/AutuationText"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+	
+	                <EditText
+	                    android:id="@+id/autuationTextInquiry"
+	                    android:layout_width="300dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="10sp"
+	                    android:ems="10"
+	                    android:inputType="textMultiLine" >
+	                </EditText>
+	                
+				</LinearLayout>
+				
+                <LinearLayout
+		        	android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:background="#FFFFE0"
+			        android:orientation="horizontal" >
+	                
+                    <TextView
+				        android:id="@+id/TextView03"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10sp"
+				        android:layout_marginTop="10sp"
+				        android:text="@string/stateText"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+                    
+                    <TextView
+	                    android:id="@+id/TextView04"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="55sp"
+				        android:layout_marginTop="10sp"
+	                    android:text="@string/cityText"
+	                    android:textSize="17sp"
+	                    android:textStyle="bold" />
+                    
+				</LinearLayout>
+				
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/textView08"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView07"
-        android:layout_alignBottom="@+id/textView07"
-        android:layout_marginLeft="23dp"
-        android:layout_toRightOf="@+id/textView07"
-        android:text="@string/hourText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/stateTextInquiry"
+                        android:layout_width="90dp"
+                        android:layout_height="40sp"
+                        android:layout_marginLeft="10sp"
+                        android:ems="10"
+                        android:inputType="none" />
 
-    <TextView
-        android:id="@+id/TextView05"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/consultButton"
-        android:layout_below="@+id/consultButton"
-        android:layout_marginTop="16dp"
-        android:gravity="left"
-        android:text="@string/AutuationText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/cityTextInquiry"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2sp"
+                        android:ems="10"
+                        android:inputType="text" >
+                    </EditText>
+                    
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="horizontal" >
+                    
+                    <TextView
+				        android:id="@+id/textView05"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10sp"
+				        android:layout_marginTop="10sp"
+				        android:text="@string/companyText"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+                    
+                    <TextView
+				        android:id="@+id/textView06"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="10sp"
+				        android:layout_marginLeft="80sp"
+				        android:text="@string/vehicleModel"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+                    
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="horizontal" >
 
-    <EditText
-        android:id="@+id/autuationTextInquiry"
-        android:layout_width="110dp"
-        android:layout_height="40sp"
-        android:layout_alignLeft="@+id/TextView05"
-        android:layout_alignRight="@+id/backToMenuButtonInquiry"
-        android:layout_below="@+id/TextView05"
-        android:ems="10"
-        android:inputType="none" />
-
-    <TextView
-        android:id="@+id/textView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/companyTextInquiry"
-        android:layout_below="@+id/autuationTextInquiry"
-        android:text="@string/companyText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/companyTextInquiry"
-        android:layout_width="110dp"
-        android:layout_height="40sp"
-        android:layout_below="@+id/textView02"
-        android:layout_toLeftOf="@+id/orgaoTextInquiry"
-        android:ems="10"
-        android:inputType="none" />
-
-    <TextView
-        android:id="@+id/TextView12"
-        android:layout_width="123dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/orgaoTextInquiry"
-        android:layout_below="@+id/modelTextInquiry"
-        android:gravity="left"
-        android:text="@string/textOrgao"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/yearTextInquiry"
-        android:layout_width="110dp"
-        android:layout_height="40sp"
-        android:layout_alignBaseline="@+id/orgaoTextInquiry"
-        android:layout_alignBottom="@+id/orgaoTextInquiry"
-        android:layout_alignLeft="@+id/textView04"
-        android:layout_toLeftOf="@+id/captureButton"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
-        android:id="@+id/textView04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/yearTextInquiry"
-        android:layout_alignLeft="@+id/companyTextInquiry"
-        android:text="@string/yearText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/orgaoTextInquiry"
-        android:layout_width="180sp"
-        android:layout_height="40sp"
-        android:layout_alignRight="@+id/modelTextInquiry"
-        android:layout_below="@+id/TextView12"
-        android:ems="10"
-        android:inputType="none" />
-
-    <TextView
-        android:id="@+id/textView07"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/scrollView1"
-        android:layout_below="@+id/textNameInquiry"
-        android:text="@string/dateText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-	    
-</RelativeLayout>
+                    <EditText
+                        android:id="@+id/companyTextInquiry"
+                        android:layout_width="130dp"
+                        android:layout_height="40sp"
+                        android:layout_marginLeft="10sp"
+                        android:ems="10"
+                        android:inputType="text" />
+                    
+                    <EditText
+				        android:id="@+id/modelTextInquiry"
+				        android:layout_width="170dp"
+				        android:layout_height="40sp"
+				        android:ems="10"
+				        android:inputType="none" />
+                    
+				</LinearLayout>
+				
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="horizontal" >
+                    
+                    <TextView
+				        android:id="@+id/textView07"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10sp"
+				        android:layout_marginTop="10sp"
+				        android:text="@string/yearText"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+                    
+                    <TextView
+	                    android:id="@+id/textView08"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="85dp"
+	                    android:layout_marginTop="10sp"
+	                    android:text="@string/colorText"
+	                    android:textSize="17sp"
+	                    android:textStyle="bold" />
+                    
+				</LinearLayout>
+				
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="horizontal" >
+                    
+                    <EditText
+                        android:id="@+id/yearTextInquiry"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:ems="10"
+                        android:inputType="number" />
+                    
+                    <EditText
+	                    android:id="@+id/colorTextInquiry"
+	                    android:layout_width="180dp"
+	                    android:layout_height="wrap_content"
+	                    android:ems="10"
+	                    android:inputType="text" />
+                    
+				</LinearLayout>
+				
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="vertical" >
+                    
+                    <TextView
+				        android:id="@+id/textView09"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+						android:layout_marginLeft="10sp"
+						android:layout_marginTop="10sp"
+				        android:text="@string/propertyText"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+                    
+                    <EditText
+				        android:id="@+id/textNameInquiry"
+				        android:layout_width="300dp"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10sp"
+				        android:ems="10"
+				        android:inputType="textPersonName" />
+                    
+				</LinearLayout>
+				
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="horizontal" >
+                    
+                    <TextView
+				        android:id="@+id/textView10"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10sp"
+				        android:layout_marginTop="10sp"
+				        android:text="@string/dateText"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+                    
+                    <TextView
+				        android:id="@+id/textView11"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="10sp"
+				        android:layout_marginLeft="23dp"
+				        android:text="@string/hourText"
+				        android:textSize="17sp"
+				        android:textStyle="bold" />
+                    
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFE0"
+                    android:orientation="horizontal" >
+                    
+                    <EditText
+				        android:id="@+id/textDateInquiry"
+				        android:layout_width="130dp"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10sp"
+				        android:ems="10"
+				        android:textSize="18sp"
+				        android:inputType="date" />
+                    
+                    <EditText
+				        android:id="@+id/textHourInquiry"
+				        android:layout_width="155dp"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="23dp"
+				        android:ems="10"
+				        android:textSize="18sp"
+				        android:inputType="time" />
+                    
+				</LinearLayout>                    				
+                    
+			</LinearLayout>
+        
+        </ScrollView>
+        
+</LinearLayout>

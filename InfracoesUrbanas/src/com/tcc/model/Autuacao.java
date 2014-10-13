@@ -4,22 +4,24 @@ import java.io.Serializable;
 
 public class Autuacao implements Serializable{
 	
-	private String orgaoAutuador;
+	private String estado;
 	private String placa;
 	private String marca;
 	private String modelo;
 	private String ano;
 	private String autuacao;
 	private String proprietario;
+	private String municipio;
+	private String cor;
 	private String data;
 	private String hora;
 	
 	
-	public String getOrgaoAutuador() {
-		return orgaoAutuador;
+	public String getEstado() {
+		return estado;
 	}
-	public void setOrgaoAutuador(String orgaoAutuador) {
-		this.orgaoAutuador = orgaoAutuador;
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 	
 	
@@ -71,6 +73,22 @@ public class Autuacao implements Serializable{
 	}
 	
 	
+	public String getMunicipio() {
+		return municipio;
+	}
+	public void setMunicipio(String municipio) {
+		this.municipio = municipio;
+	}
+	
+	
+	public String getCor() {
+		return cor;
+	}
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	
+	
 	public String getData() {
 		return data;
 	}
@@ -88,13 +106,15 @@ public class Autuacao implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "\nOrgao Autuador: " + this.orgaoAutuador +
+		return "\nOrgao Autuador: " + this.estado +
 				"\nPlaca: " + this.placa +
 				"\nMarca: " + this.marca +
 				"\nModelo: " + this.modelo +
 				"\nAno: " + this.ano +
 				"\nAutuacao: " + this.autuacao +
 				"\nProprietario: " + this.proprietario +
+				"\nMunicipio: " + this.municipio +
+				"\nCor: " + this.cor +
 				"\nData da Autuacao: " + this.data +
 				"\nHora da Autuacao: " + this.hora;
 	}

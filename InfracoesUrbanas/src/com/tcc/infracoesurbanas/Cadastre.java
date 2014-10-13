@@ -16,27 +16,39 @@ import com.tcc.webservice.AutuacaoREST;
 
 public class Cadastre extends Activity{
 	
+	protected EditText editTextPlaca;
+	public String placa;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cadastre);
 		
-		final EditText editTextPlaca = (EditText) findViewById(R.id.boardTextCadastre);
+		Intent i = getIntent();
+        placa = i.getStringExtra("recognizedBoard");
+        
+        editTextPlaca = (EditText) findViewById(R.id.boardTextCadastre);
+		
+		//final EditText editTextPlaca = (EditText) findViewById(R.id.boardTextCadastre);
+		final EditText editTextMunicipio = (EditText) findViewById(R.id.cityTextCadastre);
 		final EditText editTextName = (EditText) findViewById(R.id.textNameCadastre);
 		final EditText editTextModelo = (EditText) findViewById(R.id.modelText);
-		final Spinner spinnerOrgao = (Spinner) findViewById(R.id.orgaoSpinner);
+		final EditText editTextCor = (EditText) findViewById(R.id.colorTextCadastre);
+		final Spinner spinnerEstado = (Spinner) findViewById(R.id.stateSpinner);
 		final Spinner spinnerMarca = (Spinner) findViewById(R.id.companySpinner);
 		final Spinner spinnerAno = (Spinner) findViewById(R.id.yearSpinner);
 		final Spinner spinnerAutuacao = (Spinner) findViewById(R.id.spinnerAutuacao);
 		Button buttonCadastrar = (Button) findViewById(R.id.cadastreButton);
 		final TextView textMessage = (TextView) findViewById(R.id.textView12);
 		
-		//ArrayAdapter para Orgao Autuador  
+		editTextPlaca.setText(placa);
+		
+		//ArrayAdapter para Estado  
 		ArrayAdapter<CharSequence> adapterOrgaoAutuador = ArrayAdapter.createFromResource(
-				this, R.array.orgaoAutuador, android.R.layout.simple_spinner_item);
+				this, R.array.state, android.R.layout.simple_spinner_item);
 		adapterOrgaoAutuador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		
-		spinnerOrgao.setAdapter(adapterOrgaoAutuador);
+		spinnerEstado.setAdapter(adapterOrgaoAutuador);
 		
 		//ArrayAdapter para Marca do Veiculo
 		ArrayAdapter<CharSequence> adapterCompany = ArrayAdapter.createFromResource(
@@ -66,11 +78,13 @@ public class Cadastre extends Activity{
 			@Override
 			public void onClick(View v) {
 				Autuacao autuacao = new Autuacao();
-				autuacao.setOrgaoAutuador(spinnerOrgao.getSelectedItem().toString());
+				autuacao.setEstado(spinnerEstado.getSelectedItem().toString());
+				autuacao.setMunicipio(editTextMunicipio.getText().toString());
 				autuacao.setPlaca(editTextPlaca.getText().toString());
 				autuacao.setMarca(spinnerMarca.getSelectedItem().toString());
 				autuacao.setModelo(editTextModelo.getText().toString());
 				autuacao.setAno(spinnerAno.getSelectedItem().toString());
+				autuacao.setCor(editTextCor.getText().toString());
 				autuacao.setAutuacao(spinnerAutuacao.getSelectedItem().toString());
 				autuacao.setProprietario(editTextName.getText().toString());
 				
@@ -97,6 +111,12 @@ public class Cadastre extends Activity{
 	public void onBackToMenuButtonCadastreClick(View v) {
 		Intent i = new Intent();
 		i.setClass(this, Menu.class);
+		startActivity(i);
+	}
+	
+	public void goToInquiryClick(View v) {
+		Intent i = new Intent();
+		i.setClass(this, Inquiry.class);
 		startActivity(i);
 	}
 	

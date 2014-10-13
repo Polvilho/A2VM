@@ -35,9 +35,12 @@
     <string name="ocrBoardText">Placa</string>
     <string name="ocrPicture">Tirar Foto</string>
     <string name="ocrImport">Importar</string>
+    <string name="stateText">Estado:</string>
+    <string name="cityText">Município:</string>
+    <string name="colorText">Cor:</string>
     <string name="emptyText"></string>
     
-    <string-array name="orgaoAutuador">
+    <string-array name="state">
         <item>AC</item>
         <item>AL</item>
         <item>AP</item>
@@ -198,7 +201,7 @@
         <item >Ram</item>
         <item >Renault</item>
         <item >Smart</item>
-        <item >Ssangyong</item>
+        <item >Sangyong</item>
         <item >Subaru</item>
         <item >Suzuki</item>
         <item >Toyota</item>

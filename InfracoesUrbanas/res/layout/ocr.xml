@@ -9,6 +9,7 @@
         android:id="@+id/field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="150sp"
         android:hint="@string/ocrBoardText"
         android:gravity="center" />
 
@@ -17,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ocrPicture"
-        android:textSize="16sp"
+        android:textSize="17sp"
         android:textStyle="bold" />
 
     <Button
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="@string/ocrImport"
         android:onClick="onImportDataButtonClick"
-        android:textSize="16sp"
+        android:textSize="17sp"
         android:textStyle="bold" />
 
 </LinearLayout>

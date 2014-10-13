@@ -13,6 +13,7 @@ import com.tcc.webservice.AutuacaoREST;
 
 public class Inquiry extends Activity{
 	
+	protected EditText editTextPlaca;
 	private String placa;
 	
 	@Override
@@ -23,17 +24,20 @@ public class Inquiry extends Activity{
         Intent i = getIntent();
         placa = i.getStringExtra("recognizedBoard");
         
-        final EditText editTextPlaca = (EditText) findViewById(R.id.boardTextInquiry);
+        editTextPlaca = (EditText) findViewById(R.id.boardTextInquiry);
+        
+        //final EditText editTextPlaca = (EditText) findViewById(R.id.boardTextInquiry);
     	final EditText editTextAutuacao = (EditText) findViewById(R.id.autuationTextInquiry);
     	final EditText editTextMarca = (EditText) findViewById(R.id.companyTextInquiry);
     	final EditText editTextModelo = (EditText) findViewById(R.id.modelTextInquiry);
     	final EditText editTextAno = (EditText) findViewById(R.id.yearTextInquiry);
-    	final EditText editTextOrgaoAutuador = (EditText) findViewById(R.id.orgaoTextInquiry);
+    	final EditText editTextCor = (EditText) findViewById(R.id.colorTextInquiry);
+    	final EditText editTextEstado = (EditText) findViewById(R.id.stateTextInquiry);
+    	final EditText editTextMunicipio = (EditText) findViewById(R.id.cityTextInquiry);
     	final EditText editTextProprietario = (EditText) findViewById(R.id.textNameInquiry);
     	final EditText editTextData = (EditText) findViewById(R.id.textDateInquiry);
     	final EditText editTextHora = (EditText) findViewById(R.id.textHourInquiry);
     	Button buttonConsultar = (Button) findViewById(R.id.consultButton);
-    	//Button buttonCapturar = (Button) findViewById(R.id.captureButton);
     	
     	editTextPlaca.setText(placa);
     	
@@ -50,7 +54,9 @@ public class Inquiry extends Activity{
 					editTextMarca.setText(autuacao.getMarca().toString());
 					editTextModelo.setText(autuacao.getModelo().toString());
 					editTextAno.setText(autuacao.getAno().toString());
-					editTextOrgaoAutuador.setText(autuacao.getOrgaoAutuador().toString());
+					editTextCor.setText(autuacao.getCor().toString());
+					editTextEstado.setText(autuacao.getEstado().toString());
+					editTextMunicipio.setText(autuacao.getMunicipio().toString());
 					editTextProprietario.setText(autuacao.getProprietario().toString());
 					editTextData.setText(autuacao.getData().toString());
 					editTextHora.setText(autuacao.getHora().toString());
@@ -85,4 +91,11 @@ public class Inquiry extends Activity{
 		startActivity(i);
 	}
 	
+	public void goToCadastreClick(View v) {
+		Intent i = new Intent();
+		i.setClass(this, Cadastre.class);
+		i.putExtra("recognizedBoard", editTextPlaca.getText().toString());
+		startActivity(i);
+	}
+
 }

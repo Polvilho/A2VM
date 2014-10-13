@@ -1,193 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFE0"
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="0dip"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/textSerie"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/boardTextCadastre"
-        android:layout_width="180dp"
-        android:layout_height="40sp"
-        android:layout_alignBaseline="@+id/textView04"
-        android:layout_alignBottom="@+id/textView04"
-        android:layout_alignRight="@+id/textNameCadastre"
-        android:layout_toRightOf="@+id/textView05"
-        android:ems="10"
-        android:inputType="none" >
-    </EditText>
-
-    <Spinner
-        android:id="@+id/yearSpinner"
-        style="@style/spinnerStyle"
-        android:layout_alignLeft="@+id/textView07"
-        android:layout_below="@+id/textView07" />
-
-    <TextView
-        android:id="@+id/textView05"
+        android:id="@+id/textView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/companySpinner"
-        android:layout_alignLeft="@+id/textView04"
-        android:text="@string/companyText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView05"
-        android:layout_below="@+id/companySpinner"
-        android:layout_marginTop="15dp"
-        android:text="@string/yearText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView09"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView07"
-        android:layout_below="@+id/yearSpinner"
-        android:layout_marginTop="14dp"
-        android:text="@string/propertyText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/textNameCadastre"
-        android:layout_width="280sp"
-        android:layout_height="40sp"
-        android:layout_alignLeft="@+id/textView09"
-        android:layout_below="@+id/textView09"
-        android:ems="10"
-        android:inputType="text" />
-
-    <Button
-        android:id="@+id/cadastreButton"
-        android:layout_width="95sp"
-        android:layout_height="40sp"
-        android:layout_alignLeft="@+id/textNameCadastre"
-        android:layout_alignRight="@+id/textNameCadastre"
-        android:layout_below="@+id/textNameCadastre"
-        android:layout_marginTop="14dp"
-        android:text="@string/cadastreButton"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/backToMenuButtonCadastre"
-        android:layout_width="95sp"
-        android:layout_height="40sp"
-        android:layout_alignLeft="@+id/cadastreButton"
-        android:layout_alignRight="@+id/cadastreButton"
-        android:layout_below="@+id/cadastreButton"
-        android:onClick="onBackToMenuButtonCadastreClick"
-        android:text="@string/buttonBack"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView04"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="86dp"
-        android:text="@string/boardText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
+        android:paddingLeft="10sp"
+        android:paddingTop="15sp"
+        android:text="@string/AutuationText"
+        android:textSize="17sp"
         android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spinnerAutuacao"
         style="@style/spinnerStyle"
-        android:layout_above="@+id/boardTextCadastre"
-        android:layout_alignLeft="@+id/textView04"
-        android:layout_alignRight="@+id/boardTextCadastre" />
-
-    <TextView
-        android:id="@+id/textView08"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/spinnerAutuacao"
-        android:layout_alignLeft="@+id/textView04"
-        android:gravity="left"
-        android:text="@string/AutuationText"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/companySpinner"
-        style="@style/spinnerStyle"
-        android:layout_alignLeft="@+id/yearSpinner"
-        android:layout_below="@+id/textView06" />
-
-    <Spinner
-        android:id="@+id/orgaoSpinner"
-        style="@style/spinnerStyle"
-        android:layout_alignLeft="@+id/modelText"
-        android:layout_alignRight="@+id/textNameCadastre"
-        android:layout_below="@+id/textView07" />
-
-    <EditText
-        android:id="@+id/modelText"
-        android:layout_width="150sp"
-        android:layout_height="33sp"
-        android:layout_above="@+id/textView07"
-        android:layout_alignRight="@+id/boardTextCadastre"
-        android:layout_alignTop="@+id/companySpinner"
-        android:ems="10"
-        android:inputType="none" />
-
-    <TextView
-        android:id="@+id/TextView03"
-        android:layout_width="123dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/orgaoSpinner"
-        android:layout_alignLeft="@+id/orgaoSpinner"
-        android:gravity="left"
-        android:text="@string/textOrgao"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView06"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextView03"
-        android:layout_below="@+id/boardTextCadastre"
-        android:layout_marginTop="26dp"
-        android:text="@string/vehicleModel"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:paddingLeft="10sp" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text=""
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:background="#FFFFE0"
+        android:orientation="horizontal" >
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:text="@string/boardText"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/boardTextCadastre"
+            android:layout_width="240dp"
+            android:layout_height="35sp"
+            android:layout_marginLeft="10sp"
+            android:ems="10"
+            android:inputType="none" >
+        </EditText>
+        
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="188dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFE0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="10sp"
+                    android:text="@string/stateText"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TextView04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:text="@string/cityText"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/stateSpinner"
+                    style="@style/spinnerStyle"
+                    android:paddingLeft="10sp" />
+
+                <EditText
+                    android:id="@+id/cityTextCadastre"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:ems="10"
+                    android:inputType="text" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:paddingLeft="10sp"
+                    android:text="@string/companyText"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/vehicleModel"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/companySpinner"
+                    style="@style/spinnerStyle"
+                    android:paddingLeft="10sp" />
+
+                <EditText
+                    android:id="@+id/modelText"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:ems="10"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:paddingLeft="10sp"
+                    android:text="@string/yearText"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginTop="10sp"
+                    android:text="@string/colorText"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/yearSpinner"
+                    style="@style/spinnerStyle"
+                    android:paddingLeft="10sp" />
+
+                <EditText
+                    android:id="@+id/colorTextCadastre"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:ems="10"
+                    android:inputType="text" />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFE0"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="@string/propertyText"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/textNameCadastre"
+                    android:layout_width="295dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFE0"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cadastreButton"
+            android:layout_width="140dp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/cadastreButton"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/backToMenuButtonCadastre"
+            android:layout_width="150dp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="onBackToMenuButtonCadastreClick"
+            android:text="@string/buttonBack"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFE0"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/goToInquiryButton"
+            android:layout_width="300dp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="10dp"
+            android:onClick="goToInquiryClick"
+            android:text="@string/toInquiryText"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        
+	</LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFE0"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="#32CD32"
+            android:textSize="20sp" />
+    </LinearLayout>
+        
+</LinearLayout>
