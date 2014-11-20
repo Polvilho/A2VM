@@ -1,51 +1,99 @@
 package com.tcc.infracoesurbanas;
 
-import com.tcc.model.Usuario;
-import com.tcc.webservice.UsuarioREST;
-
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.tcc.model.Usuario;
+import com.tcc.webservice.UsuarioREST;
+
 public class MainActivity extends Activity {
 	
+	private ProgressDialog progressDialog;
+	
 	private String user;
+	private boolean sucesso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-        	StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        	
-        	StrictMode.setThreadPolicy(policy);
-        }
+        Button loginButton = (Button) findViewById(R.id.enterButton);
+        
+        loginButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				new GetUsuario().execute();
+				
+			}
+		});
     }
     
-    public void onEnterButtonClick(View v){
+    private class GetUsuario extends AsyncTask<Void, Void, Void> {
     	
-    	final EditText editTextUsuario = (EditText) findViewById(R.id.authenticationLogin);
-        final TextView textMessage = (TextView) findViewById(R.id.textViewMessageLogin);
-        
-        user = editTextUsuario.getText().toString();
-		UsuarioREST usuarioREST = new UsuarioREST();
-		
-		try {
-			Usuario usuario = usuarioREST.getUsuario(user);
-			if(editTextUsuario.getText().toString() != usuario.getUsuario()){
-				Intent i = new Intent();
-		    	i.setClass(this, com.tcc.infracoesurbanas.Menu.class);
-		    	startActivity(i);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			textMessage.setText("Usuário ou Senha Incorreto");
-		}
+    	@Override
+    	protected void onPreExecute() {
+    		super.onPreExecute();
+    		
+    		progressDialog = new ProgressDialog(MainActivity.this);
+    		progressDialog.setMessage("Entrando...");
+    		progressDialog.setCancelable(false);
+    		progressDialog.show();
+    	}
+    	
+    	@Override
+    	protected Void doInBackground(Void... arg0) {
+    		
+    		final EditText editTextUsuario = (EditText) findViewById(R.id.authenticationLogin);
+    		
+    		user = editTextUsuario.getText().toString();
+    		UsuarioREST usuarioREST = new UsuarioREST();
+    		
+    		try {
+    			Usuario usuario = usuarioREST.getUsuario(user);
+    			
+    			if(editTextUsuario.getText().toString() != usuario.getUsuario()) {
+    				sucesso = true;
+    			}
+    		} catch(Exception e) {
+    			sucesso = false;
+    			e.printStackTrace();
+    		}
+    		
+    		return null;
+    		
+    	}
+    	
+    	@Override
+    	protected void onPostExecute(Void result) {
+    		super.onPostExecute(result);
+    		
+    		final TextView textMessage = (TextView) findViewById(R.id.textViewMessageLogin);
+    		
+    		if (progressDialog.isShowing())
+    			progressDialog.dismiss();
+    		
+    		if (sucesso == true) {
+    			openMenu();
+    		}
+    		else {
+    			textMessage.setText("Usuário e(ou) Senha Incorreto(s)");
+    		}
+    	}
+    }
+    
+    public void openMenu() {
+    	Intent i = new Intent();
+    	i.setClass(this, com.tcc.infracoesurbanas.Menu.class);
+    	startActivity(i);
     }
     
 }
