@@ -5,11 +5,11 @@ import com.tcc.model.Usuario;
 
 public class UsuarioREST {
 	
-	private static final String URL_WS = "http://192.168.1.106:8080/A2VMWebservice/usuario/";
+	private static final String URL_WS = "http://192.168.1.104:8080/A2VMWebservice/usuario/";
 	
 	public Usuario getUsuario (String user) throws Exception {
 		
-		String[] resposta = new WebServiceUsuario().get(URL_WS + user);
+		String[] resposta = new WebServiceUsuario().doInBackground(URL_WS + user);
 		
 		if (resposta[0].equals("200")) {
 			Gson gson = new Gson();

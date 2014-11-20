@@ -8,14 +8,16 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 
+import android.os.AsyncTask;
 import android.util.Log;
 
-public class WebServiceUsuario {
+public class WebServiceUsuario extends AsyncTask<String, Integer, String[]> {
 	
-	public final String[] get(String url) {
+	@Override
+	protected String[] doInBackground(String... params) {
 		
 		String[] result = new String[2];
-		HttpGet httpget = new HttpGet(url);
+		HttpGet httpget = new HttpGet(params[0]);
 		HttpResponse response;
 		
 		try {

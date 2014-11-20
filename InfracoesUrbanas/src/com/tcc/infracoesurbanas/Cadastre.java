@@ -1,7 +1,9 @@
 package com.tcc.infracoesurbanas;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -9,15 +11,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tcc.model.Autuacao;
 import com.tcc.webservice.AutuacaoREST;
 
 public class Cadastre extends Activity{
 	
+	private ProgressDialog progressDialog;
+	
 	protected EditText editTextPlaca;
 	public String placa;
+	
+	Autuacao autuacao = new Autuacao();
+	private String resposta;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -39,7 +45,6 @@ public class Cadastre extends Activity{
 		final Spinner spinnerAno = (Spinner) findViewById(R.id.yearSpinner);
 		final Spinner spinnerAutuacao = (Spinner) findViewById(R.id.spinnerAutuacao);
 		Button buttonCadastrar = (Button) findViewById(R.id.cadastreButton);
-		final TextView textMessage = (TextView) findViewById(R.id.textView12);
 		
 		editTextPlaca.setText(placa);
 		
@@ -77,7 +82,7 @@ public class Cadastre extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				Autuacao autuacao = new Autuacao();
+
 				autuacao.setEstado(spinnerEstado.getSelectedItem().toString());
 				autuacao.setMunicipio(editTextMunicipio.getText().toString());
 				autuacao.setPlaca(editTextPlaca.getText().toString());
@@ -88,24 +93,47 @@ public class Cadastre extends Activity{
 				autuacao.setAutuacao(spinnerAutuacao.getSelectedItem().toString());
 				autuacao.setProprietario(editTextName.getText().toString());
 				
-				AutuacaoREST autuacaoREST = new AutuacaoREST();
+				new SetAutuacao().execute();
 				
-				try {
-					String resposta = autuacaoREST.inserirAutuacao(autuacao);
-					textMessage.setText(resposta);
-				} catch (Exception e) {
-					e.printStackTrace();
-					gerarToast(e.getMessage());
-				}
 			}
 		});
 	}
 	
-	private void gerarToast(CharSequence message) {
-		int duration = Toast.LENGTH_LONG;
-		Toast toast = Toast
-				.makeText(getApplicationContext(), message, duration);
-		toast.show();
+	private class SetAutuacao extends AsyncTask<Void, Void, Void> {
+		
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			
+			progressDialog = new ProgressDialog(Cadastre.this);
+			progressDialog.setMessage("Aguarde...");
+			progressDialog.setCancelable(false);
+			progressDialog.show();
+		}
+		
+		@Override
+		protected Void doInBackground(Void... arg0){
+			
+			AutuacaoREST autuacaoREST = new AutuacaoREST();
+			
+			try {
+				resposta = autuacaoREST.inserirAutuacao(autuacao);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+		}
+		
+		@Override
+		protected void onPostExecute(Void result) {
+			super.onPostExecute(result);
+			
+			if (progressDialog.isShowing())
+					progressDialog.dismiss();
+			
+			final TextView textMessage = (TextView) findViewById(R.id.textView12);
+			textMessage.setText(resposta);
+		}
 	}
 	
 	public void onBackToMenuButtonCadastreClick(View v) {
